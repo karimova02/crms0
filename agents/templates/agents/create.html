@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %} Create Agent {% endblock %}
+
+{% block content %}
+
+    <a href="/Agents/">Agentlar bo'limi</a>
+    <br>
+    <form method="post">
+        <p>
+        {% csrf_token %} 
+        {{ form.as_p }}
+        <button type="submit">Send</button>
+    </form>
+
+{% endblock %}
